@@ -7,6 +7,7 @@ import { useState } from 'react'
 const menuItems = [
   { href: '/', label: 'Início', icon: '🏠' },
   { href: '/obras', label: 'Obras', icon: '🏗️' },
+  { href: '/prefeituras', label: 'Prefeituras', icon: '🏛️' },
   { href: '/consulta-cep', label: 'Consulta CEP', icon: '📍' },
   { href: '/relatorios', label: 'Relatórios', icon: '📊' },
 ]
