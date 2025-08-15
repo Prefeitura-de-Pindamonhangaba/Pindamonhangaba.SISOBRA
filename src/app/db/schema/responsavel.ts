@@ -1,0 +1,32 @@
+import { pgTable, varchar, char, timestamp } from 'drizzle-orm/pg-core'
+
+// RESPONSAVEL
+export const responsavel = pgTable('RESPONSAVEL', {
+  csTipResp: char('CS_TIP_RESP', { length: 1 }),
+  idResponsavel: varchar('ID_RESPONSAVEL', { length: 14 }).primaryKey(),
+  nmResponsavel: varchar('NM_RESPONSAVEL', { length: 55 }),
+  idTipoLgdr: varchar('ID_TIPO_LGDR', { length: 10 }),
+  nmEndereco: varchar('NM_ENDERECO', { length: 55 }),
+  nuEndereco: varchar('NU_ENDERECO', { length: 10 }).default(''),
+  complEndereco: varchar('COMPL_ENDERECO', { length: 10 }).default(''),
+  nmBairro: varchar('NM_BAIRRO', { length: 20 }),
+  nuCep: varchar('NU_CEP', { length: 8 }),
+  idMunicipio: varchar('ID_MUNICIPIO', { length: 6 }),
+  nmCidade: varchar('NM_CIDADE', { length: 30 }),
+  csUf: char('CS_UF', { length: 2 }),
+  idTipoLgdrCorr: varchar('ID_TIPO_LGDR_CORR', { length: 10 }),
+  nmEnderecoCorr: varchar('NM_ENDERECO_CORR', { length: 55 }),
+  nuEnderecoCorr: varchar('NU_ENDERECO_CORR', { length: 10 }).default(''),
+  complEnderecoCorr: varchar('COMPL_ENDERECO_CORR', { length: 10 }).default(''),
+  nmBairroCorr: varchar('NM_BAIRRO_CORR', { length: 20 }),
+  nuCepCorr: varchar('NU_CEP_CORR', { length: 8 }),
+  idMunicipioCorr: varchar('ID_MUNICIPIO_CORR', { length: 6 }),
+  nmCidadeCorr: varchar('NM_CIDADE_CORR', { length: 30 }),
+  nuTelefone: varchar('NU_TELEFONE', { length: 14 }),
+  nuFax: varchar('NU_FAX', { length: 14 }),
+  teEmail: varchar('TE_EMAIL', { length: 60 }),
+  dtAtualizacao: timestamp('DT_ATUALIZACAO'),
+  csUfCorr: char('CS_UF_CORR', { length: 2 }),
+  nuDddTel: varchar('NU_DDD_TEL', { length: 4 }),
+  nuDddFax: varchar('NU_DDD_FAX', { length: 4 }),
+})
