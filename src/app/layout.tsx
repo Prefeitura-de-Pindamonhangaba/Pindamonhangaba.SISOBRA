@@ -1,30 +1,21 @@
-import './globals.css';
+import './globals.css'
+import type { Metadata } from 'next'
 
-import { GeistSans } from 'geist/font/sans';
-
-let title = 'Next.js + Postgres Auth Starter';
-let description =
-  'This is a Next.js starter kit that uses NextAuth.js for simple email + password login and a Postgres database to persist the data.';
-
-export const metadata = {
-  title,
-  description,
-  twitter: {
-    card: 'summary_large_image',
-    title,
-    description,
-  },
-  metadataBase: new URL('https://nextjs-postgres-auth.vercel.app'),
-};
+export const metadata: Metadata = {
+  title: 'SISOBRA - Visualização de Dados',
+  description: 'Sistema de visualização de dados públicos do sistema legado SISOBRA',
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={GeistSans.variable}>{children}</body>
+    <html lang="pt-BR">
+      <body className="min-h-screen bg-gray-50">
+        {children}
+      </body>
     </html>
-  );
+  )
 }
