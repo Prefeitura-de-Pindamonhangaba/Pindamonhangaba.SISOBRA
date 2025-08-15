@@ -1,34 +1,35 @@
 {
+  "name": "sisobra-viewer",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:migrate": "drizzle-kit push:pg",
+    "db:studio": "drizzle-kit studio",
+    "db:drop": "drizzle-kit drop"
   },
   "dependencies": {
-    "@types/node": "^20.10.5",
-    "@types/pg": "^8.15.5",
-    "@types/react": "^18.2.45",
-    "@types/react-dom": "^18.2.18",
-    "bcrypt-ts": "^5.0.0",
-    "drizzle-kit": "^0.31.4",
-    "drizzle-orm": "^0.29.5",
-    "geist": "^1.2.0",
-    "next": "^14.0.4",
-    "next-auth": "5.0.0-beta.4",
-    "pg": "^8.16.3",
-    "postgres": "^3.4.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "next": "15.0.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "drizzle-orm": "^0.29.0",
+    "pg": "^8.11.3"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "dotenv": "^17.2.1",
-    "eslint": "8.56.0",
-    "eslint-config-next": "^14.0.4",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/pg": "^8.10.9",
+    "drizzle-kit": "^0.20.0",
+    "dotenv": "^16.3.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3"
   }
 }
